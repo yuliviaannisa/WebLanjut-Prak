@@ -3,8 +3,8 @@
 class Helloworld extends BaseController
 {
     public function show(){
-        echo "Yulivia Annisa Putri<br>" ;
-        echo "1857051008";
+        echo "AKU TIM AYAM MEKDI<br>" ;
+        echo "KALO KAMU???";
     }
     public function index($name, $npm) {
 
