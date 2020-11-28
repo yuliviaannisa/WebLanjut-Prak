@@ -30,14 +30,19 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
 $routes->get('/mahasiswa', 'Helloworld::show');
-$routes->get('/gema', function(){
+$routes->get('/yuan', function(){
 	echo view("mahasiswa/header");
 	echo view("mahasiswa/index");
 	echo view("mahasiswa/footer");
 });
 $routes->get('/coba/(:any)/(:num)', 'Helloworld::index/$1/$2');
+$routes->get('/', 'Pages::index');
+$routes->get('/login', 'Login::login');
+$routes->get('/register', 'Login::register');
+$routes->get('/detail', 'Pages::detail');
+$routes->get('/admin', 'Pages::admin');
+$routes->get('/about', 'Pages::about');
 
 /**
  * --------------------------------------------------------------------

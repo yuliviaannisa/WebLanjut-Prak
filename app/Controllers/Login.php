@@ -2,23 +2,26 @@
 
 class Login extends BaseController
 {
-	public function index()
+	public function login()
 	{
 		return view ('gate/login');
     }
     
     public function fungsi_login(){
-        $email= $this->request->getVar('email');
+        $username= $this->request->getVar('username');
         $password= $this->request->getVar('password');
-        if($email=="yulivia@gmail.com"&&$password=="masuk")
+        if($username=="yuliviaannisa"&&$password=="masuk")
         {
-            return redirect()->to('/home');
+            return redirect()->to('/Pages/index');
         }else{
-            return redirect()->to('/gate');
+            return redirect()->to('/Login');
         }
     }
     
     public function register(){
-        return view('gate/register');
+        return view('Gate/register');
+    }
+    public function admin() {
+        return view('Gate/admin');
     }
 }
